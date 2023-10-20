@@ -1,0 +1,24 @@
+{
+  "engines": {
+    "node": "20.x.x",
+    "npm": "10.x.x"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "eslint": "eslint --ignore-path=.gitignore '**/*.{ts,js,cjs,json}'",
+    "format": "npm run prettier -- --write && npm run eslint -- --fix",
+    "lint": "npm run prettier && npm run eslint",
+    "prettier": "prettier -c **.{ts,js,cjs,json}",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "20.8.7",
+    "@typescript-eslint/eslint-plugin": "6.8.0",
+    "@typescript-eslint/parser": "6.8.0",
+    "eslint": "8.51.0",
+    "eslint-config-prettier": "9.0.0",
+    "prettier": "3.0.3",
+    "typescript": "5.2.2"
+  }
+}
